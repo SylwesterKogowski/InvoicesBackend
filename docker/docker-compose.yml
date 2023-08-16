@@ -312,7 +312,7 @@ services:
           - no_proxy
           - MARIADB_VERSION=${MARIADB_VERSION}
       volumes:
-        - ${DATA_PATH_HOST}/mariadb/ingenious:/var/lib/mysql
+        #- ${DATA_PATH_HOST}/mariadb/ingenious:/var/lib/mysql
         - ${MARIADB_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
       ports:
         - "${MARIADB_PORT}:3306"
@@ -322,6 +322,10 @@ services:
         - MYSQL_USER=${MARIADB_USER}
         - MYSQL_PASSWORD=${MARIADB_PASSWORD}
         - MYSQL_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+        - MARIADB_DATABASE=${MARIADB_DATABASE}
+        - MARIADB_USER=${MARIADB_USER}
+        - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+        - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
       networks:
         - backend
 

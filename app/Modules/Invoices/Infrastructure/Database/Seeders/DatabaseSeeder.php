@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             CompanySeeder::class,
             InvoiceSeeder::class,
+            InvoiceBilledCompanySeeder::class,
         ]);
     }
 }

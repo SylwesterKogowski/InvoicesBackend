@@ -1,0 +1,2 @@
+# Turning off text diff and auto line ending for generated files because they contain binary data
+*.php -diff -text

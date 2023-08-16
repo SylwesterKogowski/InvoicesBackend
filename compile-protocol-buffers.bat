@@ -1,0 +1,2 @@
+REM Compiling protocol buffer definitions into code serialization classes
+dev-tools\protocol-buffers\windows\bin\protoc --php_out=./ --proto_path=./app/Modules/Invoices/Api/MessageSchemas app/Modules/Invoices/Api/MessageSchemas\*.proto 

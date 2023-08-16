@@ -1,0 +1,9 @@
+syntax = "proto3";
+package Ingenious.Invoice;
+option php_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos";
+option php_metadata_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos\\Metadata";
+enum ApprovalStatus {
+    draft = 0;
+    approved = 1;
+    rejected = 2;
+}

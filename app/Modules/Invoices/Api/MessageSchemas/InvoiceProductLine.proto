@@ -1,0 +1,14 @@
+syntax = "proto3";
+package Ingenious.Invoice;
+option php_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos";
+option php_metadata_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos\\Metadata";
+import "Product.proto";
+/**
+* Represents one billed product with it's quantity on the invoice
+ */
+message InvoiceProductLine {
+    string id = 1; // UUID of this line
+    Product product = 2;// Billed product
+    int32 quantity = 3;// Quantity of the product
+    int64 createdAt = 4;// unix timestamp in seconds of creation of the record of this line
+}

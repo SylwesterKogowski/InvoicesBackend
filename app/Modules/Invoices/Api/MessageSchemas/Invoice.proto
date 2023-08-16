@@ -1,0 +1,19 @@
+syntax = "proto3";
+package Ingenious.Invoice;
+option php_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos";
+option php_metadata_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos\\Metadata";
+import "ApprovalStatus.proto";
+import "Company.proto";
+import "InvoiceProductLine.proto";
+message Invoice {
+    string id = 1; // UUID of the invoice
+    string number = 2; // Number of the invoice in the document
+    string issueDate = 3; // YYYY-MM-DD issue date of the invoice
+    string dueDate = 4; // YYYY-MM-DD due date of the invoice
+    ApprovalStatus status = 5; // Status of the invoice approval
+    int64 createdAt = 6; // unix timestamp in seconds of the creation of the invoice record
+    int64 updatedAt = 7; // unix timestamp in seconds of the last update of the invoice record
+    Company issuingCompany = 8; // Company that issued the invoice
+    Company billedCompany = 9; // Company that is billed by the invoice
+    repeated InvoiceProductLine productLines = 10; // List of product lines of the invoice
+}

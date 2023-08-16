@@ -1,0 +1,12 @@
+syntax = "proto3";
+package Ingenious.Invoice;
+option php_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos";
+option php_metadata_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos\\Metadata";
+message Product {
+    string id = 1; // UUID of the product
+    string name = 2; // Name of the product
+    int32 bruttoPrice = 3; // Price brutto of the product
+    string currency = 4; // Currency code of the product
+    int64 updatedAt = 5; // Unix timestamp in seconds of the last update of the record
+    int64 createdAt = 6; // Unix timestamp in seconds of the creation of the record
+}

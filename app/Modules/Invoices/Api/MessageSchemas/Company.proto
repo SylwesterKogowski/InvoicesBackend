@@ -1,0 +1,15 @@
+syntax = "proto3";
+package Ingenious.Invoice;
+option php_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos";
+option php_metadata_namespace = "App\\Modules\\Invoices\\Api\\GeneratedDtos\\Metadata";
+message Company {
+    string id = 1; // UUID of the company
+    string name = 2; // company name
+    string street = 3; // street address
+    string city = 4; // city
+    string zip = 5; // zip code
+    string phone = 6; // phone number
+    string email = 7; // email address
+    int64 createdAt = 8; // unix timestamp in seconds of record creation time
+    int64 updatedAt = 9; // unix timestamp in seconds of record update time
+}
