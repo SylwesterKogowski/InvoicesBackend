@@ -4,7 +4,7 @@ This is the interview assignment for Ingenious.
 
 I modified a bit the docker (I was doing this on Windows), so it needs to be rebuild.
 Hopefully you have the same database user.
-So, the domain description is [here](app/Modules/Invoices/Domain description.md), it describes what I've done and what happens there.
+So, the domain description is [here](app/Modules/Invoices/Domain%20description.md), it describes what I've done and what happens there.
 The full endpoint test is [here](tests/Feature/Modules/Invoices/Api/Web/InvoiceControllerTest.php).
 
 
